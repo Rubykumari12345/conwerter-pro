@@ -6,3 +6,5 @@ img2pdf==0.5.1
 pdf2docx==0.5.8
 gunicorn==22.0.0
 pillow-heif==0.16.0
+svglib==1.5.1
+reportlab==4.1.0
