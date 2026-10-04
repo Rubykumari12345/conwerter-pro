@@ -1,0 +1,176 @@
+body {
+    background: linear-gradient(135deg, #f0f5ff 0%, #f8f4ff 100%);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3) !important;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3) !important;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+    border-color: #818cf8;
+}
+
+/* Animations */
+.slide-down {
+    animation: slideDown 0.4s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Drag and Drop Zone */
+.upload-zone {
+    background-color: #f8fafc;
+    border-color: #cbd5e1 !important;
+    transition: all 0.2s ease;
+}
+
+.upload-zone:hover, .upload-zone.dragover {
+    background-color: #eef2ff;
+    border-color: #6366f1 !important;
+}
+
+.upload-zone input[type="file"] {
+    opacity: 0;
+    z-index: 2;
+}
+
+.ad-placeholder {
+    background: repeating-linear-gradient(
+        45deg,
+        #f8f9fa,
+        #f8f9fa 10px,
+        #e9ecef 10px,
+        #e9ecef 20px
+    );
+}
+
+.accordion-button:not(.collapsed) {
+    color: #4F46E5;
+    background-color: #eef2ff;
+    box-shadow: none;
+}
+
+/* File List Styles */
+.max-h-300 {
+    max-height: 300px;
+}
+.file-item {
+    transition: all 0.2s ease;
+}
+.file-item:hover {
+    background-color: #eef2ff !important;
+}
+.file-remove-btn {
+    cursor: pointer;
+    color: #ef4444;
+    transition: color 0.2s;
+}
+.file-remove-btn:hover {
+    color: #b91c1c;
+}
+
+/* Dropdown Overflow Fix */
+select#conversionType {
+    max-height: 250px;
+    overflow-y: auto;
+}
+select#conversionType option {
+    padding: 10px;
+}
+
+/* Glassmorphism Navbar */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+.glass-nav .nav-link, .glass-nav .navbar-brand {
+    color: #1e293b !important;
+    font-weight: 600;
+}
+.glass-nav .nav-link:hover {
+    color: #4f46e5 !important;
+}
+
+/* Modern Card */
+.main-converter-card {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
+    border: none;
+    border-radius: 24px !important;
+}
+
+/* Upload Zone */
+.upload-zone {
+    background-color: #f8fafc;
+    border: 2px dashed #cbd5e1 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 16px;
+}
+.upload-zone:hover, .upload-zone.dragover {
+    background-color: #eef2ff;
+    border-color: #4f46e5 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
+}
+
+/* Animations */
+.floating-icon {
+    animation: float 4s ease-in-out infinite;
+}
+.floating-icon.delay-1 { animation-delay: 1s; }
+.floating-icon.delay-2 { animation-delay: 2s; }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+.text-gradient {
+    background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

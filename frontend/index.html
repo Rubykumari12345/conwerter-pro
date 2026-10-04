@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Image to PDF, PNG to JPG Converter - High Quality, Fast & Secure. Compress JPG to your exact target size.">
+    <meta name="keywords" content="image converter, PDF converter, PNG to JPG, JPG to PNG, compress image, image to PDF">
+    <title>Free Online Image & PDF Converter - High Quality</title>
+    <!-- Modern Bootstrap 5 for UI -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100 pt-5">
+
+<!-- Navbar Placeholder -->
+<nav class="navbar navbar-expand-lg navbar-light glass-nav fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#"><i class="bi bi-images me-2 text-primary"></i> ConvertPro</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fw-medium">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">All Tools</a>
+                    <ul class="dropdown-menu shadow border-0">
+                        <li><h6 class="dropdown-header text-primary fw-bold">Convert PDF</h6></li>
+                        <li><a class="dropdown-item quick-tool" href="#" data-tool="pdf_to_jpg"><i class="bi bi-file-earmark-image me-2 text-danger"></i>PDF to JPG</a></li>
+                        <li><a class="dropdown-item quick-tool" href="#" data-tool="pdf_to_docx"><i class="bi bi-file-earmark-word me-2 text-primary"></i>PDF to Word</a></li>
+                        <li><a class="dropdown-item quick-tool" href="#" data-tool="docx_to_pdf"><i class="bi bi-file-earmark-pdf me-2 text-danger"></i>Word to PDF</a></li>
+                        <li><a class="dropdown-item quick-tool" href="#" data-tool="image_to_pdf"><i class="bi bi-file-earmark-pdf me-2 text-danger"></i>Image to PDF</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header text-primary fw-bold">Organize PDF</h6></li>
+                        <li><a class="dropdown-item quick-tool" href="#" data-tool="merge_pdf"><i class="bi bi-layers me-2 text-success"></i>Merge PDF</a></li>
+                        <li><a class="dropdown-item quick-tool" href="#" data-tool="split_pdf"><i class="bi bi-layout-split me-2 text-warning"></i>Split PDF</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header text-primary fw-bold">Edit Image & PDF</h6></li>
+                        <li><a class="dropdown-item quick-tool" href="#" data-tool="compress_pdf"><i class="bi bi-file-zip me-2 text-secondary"></i>Compress PDF</a></li>
+                        <li><a class="dropdown-item quick-tool" href="#" data-tool="compress_image"><i class="bi bi-arrows-collapse me-2 text-info"></i>Compress Image</a></li>
+                        <li><a class="dropdown-item quick-tool" href="#" data-tool="to_jpg"><i class="bi bi-image me-2 text-primary"></i>Convert to JPG</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#features-section">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#security-section">Security</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact-section">Help / Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Popular Tools Quick Grid -->
+<div class="container mt-4 mb-2">
+    <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-3">
+            <div class="card h-100 border-0 shadow-sm quick-tool-card" data-tool="pdf_to_jpg" style="cursor:pointer; transition: transform 0.2s, box-shadow 0.2s;">
+                <div class="card-body text-center p-3">
+                    <i class="bi bi-file-earmark-image fs-1 text-danger mb-2 d-block"></i>
+                    <h6 class="fw-bold mb-0">PDF to JPG</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="card h-100 border-0 shadow-sm quick-tool-card" data-tool="image_to_pdf" style="cursor:pointer; transition: transform 0.2s, box-shadow 0.2s;">
+                <div class="card-body text-center p-3">
+                    <i class="bi bi-file-earmark-pdf fs-1 text-primary mb-2 d-block"></i>
+                    <h6 class="fw-bold mb-0">JPG to PDF</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="card h-100 border-0 shadow-sm quick-tool-card" data-tool="merge_pdf" style="cursor:pointer; transition: transform 0.2s, box-shadow 0.2s;">
+                <div class="card-body text-center p-3">
+                    <i class="bi bi-layers fs-1 text-success mb-2 d-block"></i>
+                    <h6 class="fw-bold mb-0">Merge PDF</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="card h-100 border-0 shadow-sm quick-tool-card" data-tool="compress_image" style="cursor:pointer; transition: transform 0.2s, box-shadow 0.2s;">
+                <div class="card-body text-center p-3">
+                    <i class="bi bi-arrows-collapse fs-1 text-warning mb-2 d-block"></i>
+                    <h6 class="fw-bold mb-0">Compress Image</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+.quick-tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    border: 1px solid #6366f1 !important;
+}
+</style>
+
+<div class="container mt-5 pt-3 mb-5">
+    
+    <!-- Hero Section -->
+    <div class="row mb-5 justify-content-center">
+        <div class="col-md-10 text-center">
+            <h1 class="fw-bolder display-4 mb-3 text-dark" style="letter-spacing: -1px;">Fast, Secure & Free <span class="text-gradient">File Converter</span></h1>
+            <p class="lead text-secondary mb-0">Convert images, PDFs, and documents instantly without losing quality.</p>
+        </div>
+    </div>
+
+    <!-- Main Converter Section -->
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+            <div class="card main-converter-card overflow-hidden">
+                <div class="card-body p-4 p-md-5 bg-white">
+                    <form id="convertForm">
+                        
+                        <!-- Drag & Drop Upload Zone -->
+                        <div class="mb-5">
+                            <label class="form-label fw-bold text-secondary fs-5"><i class="bi bi-cloud-upload me-2"></i>1. Upload File(s)</label>
+                            <div class="upload-zone text-center position-relative mt-2" id="dropZone" style="padding: 5rem 2rem;">
+                                <div class="pointer-events-none mb-4 d-flex justify-content-center gap-4">
+                                    <i class="bi bi-file-earmark-pdf fs-1 text-danger floating-icon"></i>
+                                    <i class="bi bi-images fs-1 text-primary floating-icon delay-1" style="font-size: 3rem !important;"></i>
+                                    <i class="bi bi-file-earmark-word fs-1 text-info floating-icon delay-2"></i>
+                                </div>
+                                <h4 class="fw-bold mb-2">Drag & Drop Files Here</h4>
+                                <p class="text-muted small mb-1">or click to browse</p>
+                                <span class="badge bg-light text-secondary border mt-2 px-3 py-2">Supports PNG, JPG, WEBP, PDF, HEIC up to 50MB</span>
+                                <!-- Accept multiple files for batch processing UI -->
+                                <input class="form-control position-absolute top-0 start-0 w-100 h-100 opacity-0" type="file" id="fileInput" accept=".png,.jpg,.jpeg,.webp,.pdf,.heic,.bmp,.tiff,.gif,.docx,.doc" multiple required style="cursor: pointer;">
+                            </div>
+                        </div>
+
+                        <!-- File List / Preview Section -->
+                        <div id="previewSection" class="mb-5 slide-down" style="display: none;">
+                            <label class="form-label fw-bold text-secondary">Selected Files (<span id="fileCountBadge">0</span>)</label>
+                            <div id="fileListContainer" class="d-flex flex-column gap-2 max-h-300 overflow-auto p-2 bg-light rounded border">
+                                <!-- File items will be injected here via JS -->
+                            </div>
+                        </div>
+                        
+                        <!-- Conversion Type -->
+                        <div class="mb-5 mt-5 pt-3">
+                            <label class="form-label fw-bold text-secondary fs-5"><i class="bi bi-arrow-left-right me-2"></i>2. Choose conversion format</label>
+                            <select class="form-select form-select-lg bg-light mt-2" id="conversionType" required>
+                                <option value="" disabled selected hidden>Select format...</option>
+                                <optgroup label="Image to Image">
+                                    <option value="to_png">Convert to PNG (From JPG/WEBP/HEIC)</option>
+                                    <option value="to_jpg">Convert to JPG (From PNG/WEBP/HEIC)</option>
+                                    <option value="to_webp">Convert to WEBP</option>
+                                    <option value="to_gif">Convert to GIF</option>
+                                    <option value="to_bmp">Convert to BMP</option>
+                                    <option value="to_tiff">Convert to TIFF</option>
+                                    <option value="compress_image">Compress Image (Reduce size only)</option>
+                                </optgroup>
+                                <optgroup label="To PDF">
+                                    <option value="image_to_pdf">Image(s) to PDF</option>
+                                </optgroup>
+                                <optgroup label="From PDF">
+                                    <option value="pdf_to_jpg">PDF to JPG</option>
+                                    <option value="pdf_to_png">PDF to PNG</option>
+                                    <option value="pdf_to_webp">PDF to WEBP</option>
+                                    <option value="pdf_to_docx">PDF to Word (Docx)</option>
+                                </optgroup>
+                                <optgroup label="PDF Tools">
+                                    <option value="merge_pdf">Merge PDFs (Combine multiple)</option>
+                                    <option value="compress_pdf">Compress PDF (Reduce size)</option>
+                                    <option value="split_pdf">Split PDF (Separate pages)</option>
+                                </optgroup>
+                                <optgroup label="Document to PDF">
+                                    <option value="docx_to_pdf">Word (Docx) to PDF</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="mb-4 text-center">
+                            <span class="badge bg-warning text-dark border px-3 py-2 fw-bold"><i class="bi bi-info-circle me-1"></i>Max File Size: 50MB</span>
+                        </div>
+                        
+                        <!-- Advanced Image Editing -->
+                        <div class="mb-4 p-4 bg-light rounded-4 border" id="advancedEditingContainer">
+                            <label class="form-label fw-bold text-secondary mb-4 fs-5"><i class="bi bi-sliders me-2"></i>3. Advanced Editing (Optional)</label>
+                            
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-5">
+                                    <label class="form-label small text-muted fw-bold">Resize Width (px) <span class="fw-normal fst-italic">(Leave blank for original)</span></label>
+                                    <input type="number" class="form-control bg-white" id="resizeWidth" placeholder="e.g. 1024" value="">
+                                </div>
+                                <div class="col-md-2 text-center pt-md-4">
+                                    <div class="form-check d-inline-block text-start">
+                                        <input class="form-check-input" type="checkbox" id="lockAspectRatio" checked>
+                                        <label class="form-check-label small text-muted" for="lockAspectRatio" title="Lock Aspect Ratio">
+                                            <i class="bi bi-link-45deg fs-5"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <label class="form-label small text-muted fw-bold">Resize Height (px) <span class="fw-normal fst-italic">(Leave blank for original)</span></label>
+                                    <input type="number" class="form-control bg-white" id="resizeHeight" placeholder="e.g. 768" value="">
+                                </div>
+                                
+                                <div class="col-12 mt-4 pt-3 border-top">
+                                    <label class="form-label small text-muted fw-bold mb-3">Rotation & Flip</label>
+                                    <div class="d-flex gap-3 flex-wrap align-items-center">
+                                        <select class="form-select bg-white w-auto" id="rotateAngle">
+                                            <option value="0">No Rotation</option>
+                                            <option value="90">Rotate 90° (Clockwise)</option>
+                                            <option value="180">Rotate 180°</option>
+                                            <option value="270">Rotate 270° (Counter)</option>
+                                        </select>
+                                        
+                                        <div class="form-check form-switch ms-md-3">
+                                            <input class="form-check-input" type="checkbox" id="flipH">
+                                            <label class="form-check-label small" for="flipH">Horizontal Flip</label>
+                                        </div>
+                                        <div class="form-check form-switch ms-3">
+                                            <input class="form-check-input" type="checkbox" id="flipV">
+                                            <label class="form-check-label small" for="flipV">Vertical Flip</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Compression & Quality Options -->
+                        <div class="mb-4 slide-down p-4 bg-light rounded-4 border" id="targetSizeContainer" style="display: none;">
+                            <label class="form-label fw-bold text-secondary fs-5"><i class="bi bi-file-zip me-2"></i>4. Compression & Quality (Optional)</label>
+                            
+                            <div class="mb-4 mt-3">
+                                <label class="form-label small text-muted d-flex justify-content-between fw-bold">
+                                    <span>Image Quality Slider</span>
+                                    <span id="qualityValue" class="badge bg-primary rounded-pill">80%</span>
+                                </label>
+                                <input type="range" class="form-range" id="qualitySlider" min="1" max="100" value="80">
+                                <div class="d-flex justify-content-between text-muted" style="font-size: 0.75rem;">
+                                    <span>Low Size</span>
+                                    <span>Balanced</span>
+                                    <span>High Quality</span>
+                                </div>
+                            </div>
+
+                            <hr class="text-muted">
+
+                            <label class="form-label small text-muted fw-bold mt-2">Or Compress to Exact Target Size</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control bg-white" id="targetSize" placeholder="e.g. 500" min="10">
+                                <span class="input-group-text bg-white text-secondary">KB</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Action Buttons -->
+                        <div class="d-flex flex-column flex-md-row gap-3 mt-5">
+                            <button type="submit" class="btn btn-primary btn-lg fw-bold rounded-pill shadow-sm py-3 flex-grow-1" id="convertBtn">
+                                <i class="bi bi-magic me-2"></i> Convert File(s)
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary btn-lg rounded-pill fw-bold py-3 px-5" id="clearBtn">
+                                <i class="bi bi-trash"></i> Clear All
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Progress Bar State -->
+                    <div id="loading" class="mt-5" style="display: none;">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted fw-bold">Processing your files...</span>
+                            <span class="text-primary fw-bold" id="progressText">Please wait</span>
+                        </div>
+                        <div class="progress rounded-pill shadow-sm" style="height: 12px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Success Result -->
+                    <div id="result" class="mt-4 p-4 bg-success bg-opacity-10 rounded-4 border border-success slide-down" style="display: none;">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-check-circle-fill fs-1 text-success me-3"></i> 
+                            <div>
+                                <h5 class="mb-1 fw-bold text-success">Conversion Successful!</h5>
+                                <small class="text-muted" id="resultSubtitle">Your file is ready.</small>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <a id="downloadLink" href="#" class="btn btn-success btn-lg rounded-pill shadow-sm fw-bold flex-grow-1">
+                                <i class="bi bi-download me-2"></i> Download File
+                            </a>
+                            <button id="previewBtn" type="button" class="btn btn-outline-primary btn-lg rounded-pill shadow-sm fw-bold px-4" style="display: none;">
+                                <i class="bi bi-eye me-2"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Error State -->
+                    <div id="error" class="mt-4 slide-down" style="display: none;">
+                        <div class="alert alert-danger border-0 shadow-sm rounded-4 d-flex align-items-center" id="errorMessage"></div>
+                    </div>
+                    
+                    <!-- Feature Highlights -->
+                    <div class="row g-4 mt-5 justify-content-center">
+                        <div class="col-md-4">
+                            <div class="p-4 bg-light rounded-4 border-0 h-100 text-center">
+                                <div class="d-inline-block p-3 bg-primary bg-opacity-10 rounded-circle mb-3">
+                                    <i class="bi bi-lightning-charge-fill fs-3 text-primary"></i>
+                                </div>
+                                <h6 class="fw-bold">Ultra Fast</h6>
+                                <p class="text-secondary small mb-0">Instant processing.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-4 bg-light rounded-4 border-0 h-100 text-center">
+                                <div class="d-inline-block p-3 bg-success bg-opacity-10 rounded-circle mb-3">
+                                    <i class="bi bi-shield-lock-fill fs-3 text-success"></i>
+                                </div>
+                                <h6 class="fw-bold">100% Secure</h6>
+                                <p class="text-secondary small mb-0">Auto-deleted files.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-4 bg-light rounded-4 border-0 h-100 text-center">
+                                <div class="d-inline-block p-3 bg-danger bg-opacity-10 rounded-circle mb-3">
+                                    <i class="bi bi-bullseye fs-3 text-danger"></i>
+                                </div>
+                                <h6 class="fw-bold">High Quality</h6>
+                                <p class="text-secondary small mb-0">Keeps original clarity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sidebar Ads (Hidden for now as requested) -->
+        <div class="col-md-3 mt-4 mt-md-0 d-none">
+            <div class="ad-placeholder text-muted bg-white border rounded h-100 d-flex align-items-center justify-content-center" style="min-height: 400px;">
+                <small>Sidebar Ad</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEO & Content Sections -->
+    <div class="row mt-5 pt-4" id="features-section">
+        <div class="col-md-9 mx-auto">
+            <h2 class="h4 fw-bold mb-4 text-center">How to Convert Files Online?</h2>
+            <div class="row g-4 mb-5">
+                <div class="col-md-4 text-center">
+                    <div class="p-4 bg-white rounded shadow-sm h-100 border border-light">
+                        <i class="bi bi-cloud-arrow-up-fill fs-1 text-primary mb-3 d-block"></i>
+                        <h5 class="fw-bold">Upload</h5>
+                        <p class="text-secondary small">Drag & drop your files into the box above.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="p-4 bg-white rounded shadow-sm h-100 border border-light">
+                        <i class="bi bi-sliders fs-1 text-primary mb-3 d-block"></i>
+                        <h5 class="fw-bold">Choose Format</h5>
+                        <p class="text-secondary small">Select your desired format and adjust quality.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="p-4 bg-white rounded shadow-sm h-100 border border-light">
+                        <i class="bi bi-download fs-1 text-primary mb-3 d-block"></i>
+                        <h5 class="fw-bold">Download</h5>
+                        <p class="text-secondary small">Click 'Convert' and download your files instantly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="h4 fw-bold mb-4 mt-5 text-center">Frequently Asked Questions</h2>
+            <div class="accordion shadow-sm mb-5" id="faqAccordion">
+                <div class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Is this image converter free?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary">
+                            Yes, our tool is 100% free to use. You can convert, compress, and process images without any hidden charges or watermarks.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Is my data safe and private?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary">
+                            Absolutely. We respect your privacy. All files uploaded are encrypted and automatically deleted from our servers within 1 hour after conversion.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button fw-bold bg-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            What file formats are supported?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-secondary">
+                            We support a wide variety of formats including JPG, PNG, WEBP, PDF, HEIC, GIF, BMP, and TIFF. You can convert between these easily.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="security-section" class="mb-5 pt-4">
+                <h2 class="h4 fw-bold mb-3 text-center text-md-start"><i class="bi bi-shield-lock text-success me-2"></i>Security & Privacy</h2>
+                <div class="p-4 bg-white rounded shadow-sm border border-light text-secondary">
+                    <p>At ConvertPro, your privacy is our top priority. We understand that your documents and images may contain sensitive information. That's why we have built our system to be 100% secure.</p>
+                    <ul class="mb-0">
+                        <li><strong>No File Storage:</strong> We do not store, copy, or share your files.</li>
+                        <li><strong>Auto-Deletion:</strong> All uploaded and converted files are permanently deleted from our servers automatically within 1 hour.</li>
+                        <li><strong>Secure Transfers:</strong> All data is transferred over secure, encrypted connections.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="contact-section" class="mb-5 pt-4">
+                <h2 class="h4 fw-bold mb-3 text-center text-md-start"><i class="bi bi-envelope text-primary me-2"></i>Help & Contact Us</h2>
+                <div class="p-4 bg-white rounded shadow-sm border border-light text-center">
+                    <p class="text-secondary mb-3">Facing an issue or have a suggestion? We're here to help.</p>
+                    <a href="mailto:rybycoder77@gmail.com" class="btn btn-outline-primary fw-bold"><i class="bi bi-headset me-2"></i> Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-light py-5 mt-auto border-top border-secondary" id="about-section">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Column 1: Brand & Tagline -->
+            <div class="col-lg-4 col-md-12 text-center text-lg-start">
+                <h5 class="fw-bold text-white mb-3"><i class="bi bi-images me-2 text-primary"></i> ConvertPro</h5>
+                <p class="small text-secondary mb-4 pe-lg-4">Your ultimate free online utility to convert, compress, merge, and split images and PDFs securely. We do not store your files.</p>
+                <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                    <a href="#" class="text-secondary custom-hover fs-5"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-secondary custom-hover fs-5"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-secondary custom-hover fs-5"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            
+            <!-- Column 2: Quick Links -->
+            <div class="col-lg-4 col-md-6 text-center text-lg-start mt-4 mt-lg-0">
+                <h6 class="fw-bold text-white mb-3">Quick Links</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="#about-section" class="text-secondary text-decoration-none custom-hover">About Us</a></li>
+                    <li class="mb-2"><a href="#features-section" class="text-secondary text-decoration-none custom-hover">Features</a></li>
+                    <li class="mb-2"><a href="#security-section" class="text-secondary text-decoration-none custom-hover">Security & Privacy</a></li>
+                    <li class="mb-2"><a href="#contact-section" class="text-secondary text-decoration-none custom-hover">Help / Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Popular Converters -->
+            <div class="col-lg-4 col-md-6 text-center text-lg-start mt-4 mt-lg-0">
+                <h6 class="fw-bold text-white mb-3">Popular Converters</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="#" class="text-secondary text-decoration-none custom-hover quick-tool" data-tool="pdf_to_jpg">PDF to JPG</a></li>
+                    <li class="mb-2"><a href="#" class="text-secondary text-decoration-none custom-hover quick-tool" data-tool="image_to_pdf">JPG to PDF</a></li>
+                    <li class="mb-2"><a href="#" class="text-secondary text-decoration-none custom-hover quick-tool" data-tool="merge_pdf">Merge PDF</a></li>
+                    <li class="mb-2"><a href="#" class="text-secondary text-decoration-none custom-hover quick-tool" data-tool="docx_to_pdf">Word to PDF</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="border-secondary mt-5 mb-4">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="small text-secondary mb-0">&copy; 2026 ConvertPro. All rights reserved. <br class="d-md-none"> <span class="d-none d-md-inline">|</span> Developed by <span class="text-white fw-bold">Rubykumari</span></p>
+            </div>
+            <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                <p class="small text-secondary mb-0"><strong>Secure:</strong> Auto-delete after 1 hour. <strong>Limit:</strong> Max 50MB.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+.custom-hover:hover {
+    opacity: 1 !important;
+    text-decoration: underline !important;
+}
+</style>
+
+<!-- Preview Modal -->
+<div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow-lg">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold"><i class="bi bi-eye text-primary me-2"></i>File Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center p-4">
+                <div id="previewContent" class="w-100 bg-light rounded-3 d-flex justify-content-center align-items-center" style="min-height: 400px; max-height: 75vh; overflow: auto; border: 1px dashed #cbd5e1;">
+                    <!-- Preview Content Injected Here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script_v4.js"></script>
+</body>
+</html>
